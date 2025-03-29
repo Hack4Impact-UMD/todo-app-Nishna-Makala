@@ -150,18 +150,18 @@ function App() {
         <TextField
           required
           label="Title"
-          prop={title}
+          value={title}
           onChange={(e) => setTitle(e.target.value)}
         />
         <TextField
           label="Description"
-          prop={description}
+          value={description}
           onChange={(e) => setDescription(e.target.value)}
         />
         <TextField
           label="Due Date"
           type="date"
-          prop={dueDate}
+          value={dueDate}
           onChange={(e) => setDueDate(e.target.value)}
           InputLabelProps={{ shrink: true }}
         />
@@ -181,7 +181,7 @@ function App() {
       <LinearProgress
         variant="determinate"
         sx={{ width: "100%", height: 10, borderRadius: 5, marginBottom: 2 }}
-        prop={calculateProgress()}
+        value={calculateProgress()}
       />
       <TaskTable 
         tasks={incompleteOnly ? tasks.filter((task) => !task.completed) : tasks } 
